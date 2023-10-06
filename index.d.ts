@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,16 +16,23 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { MultiSlice } from '@stdlib/types/slice';
 
 /**
-* Create a MultiSlice object from a comma-separated list of string-serialized MultiSlice constructor arguments.
+* Creates a MultiSlice object from a comma-separated list of string-serialized MultiSlice constructor arguments.
 *
-* @module @stdlib/slice-base-sargs2multislice
+* ## Notes
+*
+* -   The function returns `null` if provided an invalid string.
+*
+* @param str - input string containing constructor arguments
+* @returns MultiSlice object (or null)
 *
 * @example
-* var sargs2multislice = require( '@stdlib/slice-base-sargs2multislice' );
-*
 * var s = sargs2multislice( ',Slice(0,10,1)' );
 * // returns <MultiSlice>
 *
@@ -33,8 +40,6 @@
 * // returns [ null, <Slice> ]
 *
 * @example
-* var sargs2multislice = require( '@stdlib/slice-base-sargs2multislice' );
-*
 * var s = sargs2multislice( 'Slice(0,10,1),' );
 * // returns <MultiSlice>
 *
@@ -42,8 +47,6 @@
 * // returns [ <Slice>, null ]
 *
 * @example
-* var sargs2multislice = require( '@stdlib/slice-base-sargs2multislice' );
-*
 * var s = sargs2multislice( 'Slice(0,10,1),,,Slice(0,10,1)' );
 * // returns <MultiSlice>
 *
@@ -51,20 +54,15 @@
 * // returns [ <Slice>, null, null, <Slice> ]
 *
 * @example
-* var sargs2multislice = require( '@stdlib/slice-base-sargs2multislice' );
-*
 * var s = sargs2multislice( ',Slice(0,10,1),null,,Slice(2,9,2),null,' );
 * // returns <MultiSlice>
 *
 * var data = s.data;
 * // returns [ null, <Slice>, null, null, <Slice>, null, null ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function sargs2multislice( str: string ): MultiSlice | null;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = sargs2multislice;

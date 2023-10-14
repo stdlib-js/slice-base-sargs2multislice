@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/slice-base-sargs2multislice",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create a MultiSlice object from a comma-separated list of string-serialized MultiSlice constructor arguments.",
   "license": "Apache-2.0",
   "author": {

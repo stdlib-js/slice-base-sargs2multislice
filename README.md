@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@deno/mod.js';
+import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@v0.1.0-deno/mod.js';
 ```
 
 <a name="main"></a>
@@ -120,7 +120,7 @@ var s = sargs2multislice( 'foo,bar' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@deno/mod.js';
+import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@v0.1.0-deno/mod.js';
 
 var s = sargs2multislice( 'null,null,null' );
 var d = s.data;

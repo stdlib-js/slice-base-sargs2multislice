@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/slice-base-sargs2multislice/tags). For example,
+
+```javascript
 import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@v0.3.0-deno/mod.js';
 ```
 
@@ -120,7 +125,7 @@ var s = sargs2multislice( 'foo,bar' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@v0.3.0-deno/mod.js';
+import sargs2multislice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-base-sargs2multislice@deno/mod.js';
 
 var s = sargs2multislice( 'null,null,null' );
 var d = s.data;

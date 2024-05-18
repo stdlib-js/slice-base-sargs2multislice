@@ -172,6 +172,13 @@ s = sargs2multislice( 'foo,bar' );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/slice-base/args2multislice`][@stdlib/slice/base/args2multislice]</span><span class="delimiter">: </span><span class="description">create a MultiSlice object from a list of MultiSlice constructor arguments.</span>
+-   <span class="package-name">[`@stdlib/slice-base/seq2multislice`][@stdlib/slice/base/seq2multislice]</span><span class="delimiter">: </span><span class="description">convert a multidimensional subsequence string to a MultiSlice object.</span>
+
 </section>
 
 <!-- /.related -->
@@ -251,6 +258,14 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [@stdlib/slice/multi]: https://github.com/stdlib-js/slice-multi
 
 [@stdlib/proxy/ctor]: https://github.com/stdlib-js/proxy-ctor
+
+<!-- <related-links> -->
+
+[@stdlib/slice/base/args2multislice]: https://github.com/stdlib-js/slice-base-args2multislice
+
+[@stdlib/slice/base/seq2multislice]: https://github.com/stdlib-js/slice-base-seq2multislice
+
+<!-- </related-links> -->
 
 </section>
 

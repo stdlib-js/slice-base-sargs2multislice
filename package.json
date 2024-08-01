@@ -39,7 +39,8 @@
   "dependencies": {
     "@stdlib/slice-base-str2multislice": "^0.2.2",
     "@stdlib/string-base-replace": "^0.2.2",
-    "@stdlib/types": "^0.3.2"
+    "@stdlib/types": "^0.3.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-multi-slice": "^0.2.2",

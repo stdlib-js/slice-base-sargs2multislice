@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,21 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var replace = require( '@stdlib/string-base-replace' );
-var str2multislice = require( '@stdlib/slice-base-str2multislice' );
-
-
-// MAIN //
+import { MultiSlice } from '@stdlib/types/slice';
 
 /**
 * Creates a MultiSlice object from a comma-separated list of string-serialized MultiSlice constructor arguments.
 *
-* @param {string} str - input string containing constructor arguments
-* @returns {(MultiSlice|null)} MultiSlice object (or null)
+* ## Notes
+*
+* -   The function returns `null` if provided an invalid string.
+*
+* @param str - input string containing constructor arguments
+* @returns MultiSlice object (or null)
 *
 * @example
 * var s = sargs2multislice( ',Slice(0,10,1)' );
@@ -60,16 +60,9 @@ var str2multislice = require( '@stdlib/slice-base-str2multislice' );
 * var data = s.data;
 * // returns [ null, <Slice>, null, null, <Slice>, null, null ]
 */
-function sargs2multislice( str ) {
-	// In order to support `x[ [...] ]` syntax, we need to touch up the serialized string due to how `undefined` is serialized...
-	str = replace( str, /^,/, 'null,' );        // leading comma (e.g., [ void 0, Slice(0,10,1) ] => ',Slice(0,10,1)')
-	str = replace( str, /,$/, ',null' );        // trailing comma (e.g., [ Slice(0,10,1), void 0 ] => 'Slice(0,10,1),')
-	str = replace( str, /,(?=,)/g, ',null' );   // between commas (e.g., [ Slice(0,10,1), void 0, void 0, Slice(0,10,1) ] => 'Slice(0,10,1),,,Slice(0,10,1)')
-	str = replace( str, /undefined/g, 'null' ); // account for the possibility that the input has been manually serialized
-	return str2multislice( 'MultiSlice(' + str + ')' );
-}
+declare function sargs2multislice( str: string ): MultiSlice | null;
 
 
 // EXPORTS //
 
-module.exports = sargs2multislice;
+export = sargs2multislice;
